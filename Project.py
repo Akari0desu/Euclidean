@@ -30,6 +30,10 @@ def main():
     try:
         a = int(input("Enter the first integer: "))
         b = int(input("Enter the second integer: "))
+        if a <= 0 or b <= 0:
+            raise ValueError("Both numbers must be positive integers.")
+       
+        
         gcd = EuclideanAlgorithm.gcd(a, b)
         print(f"The GCD of {a} and {b} is: {gcd}")
     #print the sentence when given a letter instead of a number integer
